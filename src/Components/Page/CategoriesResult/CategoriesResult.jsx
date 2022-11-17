@@ -15,7 +15,7 @@ export const CategoriesResult = () => {
     const [data, setData] = useState([])
 
     const getCategories = async () => {
-        axios.get('https://localhost:44375/api/home/edification', { params: { edification: filter } })
+        axios.get('http://ehr.somee.com/api/home/edification', { params: { edification: filter } })
             .then(response => {
                 setData(response.data)
             })

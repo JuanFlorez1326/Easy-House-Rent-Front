@@ -8,7 +8,7 @@ import Carousel from 'react-elastic-carousel';
 export const MostRecent = () => {
 
   const [cardMostRecent, setCardMostRecent] = useState([])
-  const URLCMR = `https://localhost:44375/api/Home/MostRecent`
+  const URLCMR = `http://ehr.somee.com/api/Home/MostRecent`
 
   const GetMostRecent = () => {
     axios.get(URLCMR)

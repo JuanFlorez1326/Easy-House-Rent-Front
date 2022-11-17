@@ -22,7 +22,7 @@ export const Profile = () => {
     const [userAnouncement, setUserAnouncement] = useState([])
 
     const getAdversitement = () => {
-        axios.get('https://localhost:44375/api/Advertisement/AdUser', { params: { idusuario: user[0].idusuario } })
+        axios.get('http://ehr.somee.com/api/Advertisement/AdUser', { params: { idusuario: user[0].idusuario } })
             .then(response => {
                 setUserAnouncement(response.data)
             })
@@ -101,7 +101,7 @@ export const Profile = () => {
     }
 
     const changePassword = () => {
-        axios.put('https://localhost:44375/api/Password/confirmpassword',  { 
+        axios.put('http://ehr.somee.com/api/Password/confirmpassword',  { 
             email: user[0].email, 
             password: newPassword,
             validatePassword:oldPassword
@@ -112,6 +112,7 @@ export const Profile = () => {
             changePasswordVisible()
         })
     }
+    console.log(changePassword);
 
     const comparePassword = () => {
         if (newPassword === newPasswordConfirm) {

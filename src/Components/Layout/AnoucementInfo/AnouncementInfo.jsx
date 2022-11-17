@@ -76,7 +76,7 @@ export const AnouncementInfo = ({ data, userData }) => {
 
 
     const getEmailToSend = () => {
-        axios.get('https://localhost:44375/api/Users/GetUser', { params: { idusuario: idUser } })
+        axios.get('http://ehr.somee.com/api/Users/GetUser', { params: { idusuario: idUser } })
             .then(response => {
                 if (response.data.length !== 0) {
                     setEmail(response.data[0].email)
@@ -137,7 +137,7 @@ export const AnouncementInfo = ({ data, userData }) => {
     const [recomended, setRecomended] = useState([])
 
     const getRecomended = () => {
-        axios.get('https://easy-house-rent.azurewebsites.net/api/home/recommended', { params: { ciudad: city } })
+        axios.get('http://ehr.somee.com/api/home/recommended', { params: { ciudad: city } })
             .then(response => {
                 setRecomended(response.data)
             })

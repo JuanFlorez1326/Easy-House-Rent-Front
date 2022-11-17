@@ -37,7 +37,7 @@ export const GoogleAuth = ({ buttonText }) => {
     const navigate = useNavigate()
 
     const registerGoogleUser  = () =>{
-        axios.post(`https://localhost:44375/verifyEmail?email=${email}`)
+        axios.post(`http://ehr.somee.com/verifyEmail?email=${email}`)
             .then(response => {
                 if (response.data === true) {
                     axios.post(urlLogin, {

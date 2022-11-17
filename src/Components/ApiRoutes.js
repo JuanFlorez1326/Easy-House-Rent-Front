@@ -1,6 +1,6 @@
-export const urlUsers = "https://localhost:44375/api/Users";
-export const urLDepartments = "https://localhost:44375/api/Department";
-export const urlMunicipality = "https://localhost:44375/api/Municipality/0?iddepartamento=";
-export const urlLogin = "https://localhost:44375/api/Login"
-export const urlSearch = "https://localhost:44375/api/home"
-export const urlAdversitement = 'https://localhost:44375/api/Advertisement/'
+export const urlUsers = "http://ehr.somee.com/api/Users";
+export const urLDepartments = "http://ehr.somee.com/api/Department";
+export const urlMunicipality = "http://ehr.somee.com/api/Municipality/0?iddepartamento=";
+export const urlLogin = "http://ehr.somee.com/api/Login"
+export const urlSearch = "http://ehr.somee.com/api/home"
+export const urlAdversitement = 'http://ehr.somee.com/api/Advertisement/'
