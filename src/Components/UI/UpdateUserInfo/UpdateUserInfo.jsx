@@ -72,7 +72,7 @@ export const UpdateUserInfo = () => {
   }
 
   const sendDataUpdate = () => {
-    axios.put('https://localhost:44375/api/Users', {
+    axios.put('http://ehr.somee.com/api/Users', {
       idusuario: user[0].idusuario,
       nombre: name,
       apellidos: lastName,

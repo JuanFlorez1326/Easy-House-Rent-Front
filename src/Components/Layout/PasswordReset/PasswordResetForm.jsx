@@ -88,7 +88,7 @@ export const PasswordResetForm = () => {
 
     const sendNewPassword = (e) => {
         e.preventDefault();
-        axios.put(`https://localhost:44375/api/Password`, bodyParameters, { headers: { Authorization: `Bearer ${emailToken}` } })
+        axios.put(`http://ehr.somee.com//api/Password`, bodyParameters, { headers: { Authorization: `Bearer ${emailToken}` } })
             .then(response => {
                 Alert('Su contraseña ha sido actualizado correctamente', '', 'success', 'Ok', '3000')
                 navigate('/login')

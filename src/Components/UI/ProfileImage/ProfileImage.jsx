@@ -13,7 +13,7 @@ export const ProfileImage = () => {
     const [image, setImage] = useState('')
 
     const selectImage = () => {
-        axios.get('https://localhost:44375/api/Users/getUser', { params: { idusuario: idUser } })
+        axios.get('http://ehr.somee.com/api/Users/getUser', { params: { idusuario: idUser } })
             .then(response => {
                 let photo = response.data[0].foto;
                 changeDefaultImage(photo)
@@ -56,7 +56,7 @@ export const ProfileImage = () => {
     }
 
     const sendNewImage = (uploaded) => {
-        axios.post('https://localhost:44375/api/Users/ProfilePicture', {
+        axios.post('http://ehr.somee.com/api/Users/ProfilePicture', {
             idusuario: idUser,
             foto: uploaded
         })

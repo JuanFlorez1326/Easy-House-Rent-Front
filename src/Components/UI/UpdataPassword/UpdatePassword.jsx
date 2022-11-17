@@ -50,10 +50,10 @@ export const StarRating = () => {
 
   const updatePassword = (e) => { 
     e.preventDefault();
-    axios.post(`https://localhost:44375/api/Password/getpassword`, bodyParametersPassword)
+    axios.post(`http://ehr.somee.com/api/Password/getpassword`, bodyParametersPassword)
     .then(res => {
       if(response == true){
-        axios.put(`https://localhost:44375/api/api/Password`, bodyParameters, {headers:{ Authorization: `Bearer ${emailToken}` }})
+        axios.put(`http://ehr.somee.com/api/Password`, bodyParameters, {headers:{ Authorization: `Bearer ${emailToken}` }})
         .then(response => {
           console.log(response);
         }).catch(ex => {

@@ -8,7 +8,7 @@ import { Alert } from '../../Alert';
 
 export const ForgotPasswordForm = () => {
 
-    const EMAILURL = 'https://localhost:44375/api/password'
+    const EMAILURL = 'http://ehr.somee.com/api/password'
 
     const [email, setemail] = useState({ email: "email" })
 

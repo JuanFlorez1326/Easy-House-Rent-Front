@@ -3,7 +3,7 @@ import axios from 'axios'
 export const createAnouncement = (iduser, title, adress, city, description,
     modality, zone, edification, rooms, garage, price, date, images) => {
 
-    axios.post('https://localhost:44375/api/Advertisement', {
+    axios.post('http://ehr.somee.com/api/Advertisement', {
         idusuario: iduser,
         titulo: title,
         direccion: adress,
@@ -30,7 +30,7 @@ export const createAnouncement = (iduser, title, adress, city, description,
 }
 
 export const updateAnouncement = (idanounce, title, adress, city , description, modality, zone, edification, rooms, garage, price, date, images) => {
-    axios.put(`https://localhost:44375/api/Advertisement/${idanounce}`, {
+    axios.put(`http://ehr.somee.com/api/Advertisement/${idanounce}`, {
         idanuncio: idanounce,
         titulo: title,
         direccion: adress,
